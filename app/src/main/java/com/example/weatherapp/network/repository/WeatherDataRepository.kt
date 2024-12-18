@@ -4,13 +4,11 @@ import android.annotation.SuppressLint
 import android.location.Geocoder
 import com.example.weatherapp.data.CurrentLocation
 import com.example.weatherapp.data.RemoteLocation
+import com.example.weatherapp.data.RemoteWeatherData
 import com.example.weatherapp.network.api.WeatherAPI
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.Priority
 import com.google.android.gms.tasks.CancellationTokenSource
-import com.google.android.gms.tasks.OnSuccessListener
-import retrofit2.http.Query
-import kotlin.coroutines.cancellation.CancellationException
 
 class WeatherDataRepository(private val weatherAPI: WeatherAPI) {
 
@@ -56,4 +54,10 @@ class WeatherDataRepository(private val weatherAPI: WeatherAPI) {
         val response = weatherAPI.searchLocation(query = query)
         return if (response.isSuccessful) response.body() else null
     }
+
+    suspend fun getWeatherData(latitude: Double, longitude: Double): RemoteWeatherData? {
+        val response = weatherAPI.getWeatherData(query = "$latitude, $longitude")
+        return if (response.isSuccessful) response.body() else null
+    }
+
 }
