@@ -17,7 +17,6 @@ import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.example.weatherapp.R
 import com.example.weatherapp.data.CurrentLocation
-import com.example.weatherapp.data.CurrentWeather
 import com.example.weatherapp.databinding.FragmentHomeBinding
 import com.example.weatherapp.storage.SharedPreferencesManager
 import com.google.android.gms.location.LocationServices

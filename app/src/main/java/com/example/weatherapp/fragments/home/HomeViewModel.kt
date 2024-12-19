@@ -9,7 +9,6 @@ import com.example.weatherapp.data.CurrentLocation
 import com.example.weatherapp.data.CurrentWeather
 import com.example.weatherapp.data.Forecast
 import com.example.weatherapp.data.LiveDataEvent
-import com.example.weatherapp.data.WeatherData
 import com.example.weatherapp.network.repository.WeatherDataRepository
 import com.google.android.gms.location.FusedLocationProviderClient
 import kotlinx.coroutines.launch

@@ -12,7 +12,6 @@ import com.example.weatherapp.data.WeatherData
 import com.example.weatherapp.databinding.ItemContainerCurrentLocationBinding
 import com.example.weatherapp.databinding.ItemContainerCurrentWeatherBinding
 import com.example.weatherapp.databinding.ItemContainerForecastBinding
-import okhttp3.internal.notify
 
 class WeatherDataAdapter(
     private val onLocationClicked:() -> Unit
